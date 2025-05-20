@@ -6,7 +6,7 @@ import { createTableInDatabase } from './db_table.js/createTable.js'
 import router from './routes/todoRoutes.js'
 dotenv.config()
 const app = express()
-const port = process.env.PORT
+const port = process.env.PORT || 3001
 
 //middleware
 app.use(cors())
