@@ -52,7 +52,7 @@ export const updateTodoController = async (req, res) => {
 export const deleteTodoController = async (req, res) => {
   const todo_id = req.params.id;
   try {
-    const deletedTodo = await deleteTodoModel(todo_id);
+    await deleteTodoModel(todo_id);
     res
       .status(200)
       .json({ message: "todo deleted successfully!!"});
