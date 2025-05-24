@@ -26,22 +26,22 @@ const EditModal = ({ todo, editMode, setEditMode, currentId,fetchDataFromApi }) 
   return (
 
 
-      <div className="top-[50%] left-[50%] w-[90%] translate-x-[-50%] translate-y-[-80%] flex flex-col justify-center items-center gap-3 bg-neutral-900 p-4 rounded-md fixed">
-        <h3 className="cursor-default text-neutral-300">Edit Task</h3>
+      <div className="top-[50%] left-[50%] w-full translate-x-[-50%] translate-y-[-80%] flex flex-col justify-center items-center gap-3 bg-neutral-400 backdrop-blur-lg z-20  text-neutral-900   p-4 rounded-lg absolute">
+        <h3 className="cursor-default font-semibold">Edit Task</h3>
         <input
-          className="w-full bg-neutral-800 text-neutral-300 py-1 px-2 rounded-md outline-none border-1 border-blue-600/50 text-center mt-4"
+          className="w-full bg-neutral-500 font-semibold  py-1 px-2 rounded-md outline-none border-dashed border-2 border-blue-600/40 text-center mt-4"
           type="text"
           value={todo_desc}
           onChange={(e) => setTodoDesc(e.target.value)}
         />
-        <div className="flex gap-3">
-          <button className="py-1 px-6  text-green-500 bg-green-800/50 rounded-md cursor-pointer"
+        <div className="flex gap-3 mt-2">
+          <button className="py-1 px-6 text-green-900 font-semibold border-2 border-green-800 bg-green-800/50 rounded-md cursor-pointer"
           onClick={()=>handleSave(todo.todo_id)}
           >
             save
           </button>
           <button
-            className="py-1 px-6  text-red-400 bg-red-800/40 rounded-md cursor-pointer"
+            className="py-1 px-6  border-2 text-red-900 font-semibold border-red-800 bg-red-800/40 rounded-md cursor-pointer"
             onClick={() => setEditMode(!editMode)}
           >
             close

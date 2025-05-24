@@ -15,12 +15,12 @@ const Todos = ({ todoData, deleteTodo,fetchDataFromApi }) => {
   console.log(currentId);
 
   return (
-    <div className="w-full  flex justify-center flex-col items-center gap-3">
+    <div className="w-full p-4 md:p-0  flex justify-center flex-col items-center gap-3">
       {todoData.map((e, index) => (
 
         <div
           key={e.todo_id}
-          className=" w-[80%]  backdrop-blur-sm md:max-w-[60%] flex justify-between items-center text-neutral-300 py-2 px-3 bg-neutral-600/20 rounded-lg z-[1]"
+          className=" w-full  backdrop-blur-sm md:max-w-[60%] flex justify-between items-center text-neutral-300 py-2 px-3 bg-neutral-600/20 rounded-lg z-[1]"
         >
         {editMode?<EditModal fetchDataFromApi={fetchDataFromApi} currentId={currentId} todo={e} editMode={editMode} setEditMode={setEditMode}/>:null}
           <div className="w-auto flex justify-center items-center gap-3">
